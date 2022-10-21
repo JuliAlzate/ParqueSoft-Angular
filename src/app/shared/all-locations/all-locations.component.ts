@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { RickAndMortyService } from '../../services/rick-and-morty.service';
-
+import { LocationDetailComponent } from '../location-detail/location-detail.component';
 @Component({
   selector: 'app-all-locations',
   templateUrl: './all-locations.component.html',
@@ -19,10 +19,10 @@ export class AllLocationsComponent implements OnInit {
       console.log(this.alllocations);
     });
   }
-  async openModal(data: any) {
+  async openModal2(data: any) {
     const modal = await this.modalController.create({
-    component:AllLocationsComponent ,
-    componentProps: { character: data }
+    component:LocationDetailComponent,
+    componentProps: { item: data }
     });
     return await modal.present();
    }

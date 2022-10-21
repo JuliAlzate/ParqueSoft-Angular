@@ -12,7 +12,7 @@ export class EpisodeDetailComponent implements OnInit {
   constructor(private modalCtrl: ModalController) { }
 
   ngOnInit() {
-    this.item
+    console.log(this.item);
   }
   async close(){
     await this.modalCtrl.dismiss();
